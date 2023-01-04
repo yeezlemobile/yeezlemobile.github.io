@@ -11,15 +11,13 @@ input_text_label = Text(origin=[0,0], text="", position=[0.05,0.15])
 Text(origin=[0,0], text="Yeezle ∞ (htill edition)",position=[0.25,0.35]) //Header
 
 key_namings = [["q","w","e","r","t","y","u","i","o","p"],["a","s","d","f","g","h","j","k","l"],["z","x","c","v","b","n","m"]]
-keyboard_buttons = []
 
 //KEYBOARD BUTTONS
 for (let i = 0; i < 3; i++) { for (let j = 0; j < key_namings[i].length; j++) {b = Button(text=key_namings[i][j], x=(j-4.5)/11, y=(-4.5-i)/10, scale=[0.08,0.09], color=color.gray);
     b.on_click = def():
-        print(key_namings[i][j])
+        input_text += key_namings[i][j]
 }
 }
-
 
 def update():
     input_text_label.text = input_text
