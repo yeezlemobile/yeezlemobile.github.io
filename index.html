@@ -9,12 +9,13 @@ data = {'24':{'album':12, 'track':11, 'length':197, 'features':['']},'Intro':{'a
 Text(origin=[0,0], text="Yeezle ∞ (htill edition)",position=[0.25,0.35]) //Header
 
 key_namings = [["q","w","e","r","t","y","u","i","o","p"],["a","s","d","f","g","h","j","k","l"],["z","x","c","v","b","n","m"]]
+keyboard_buttons = []
 
-for j in range(3):
-    for entry in enumerate(key_namings[j]):
-        test = Button(text=entry[1],color=color.gray, scale=[0.07,0.08], x=(entry[0]-4.5)/11, y=(-4.5-j)/10)
-
-for letter in "bosh":
-    print(letter)
+for i in range(3):
+    for entry in enumerate(key_namings[i]):
+         keyboard_button = Button(text=entry[1],color=color.gray, scale=[0.07,0.08], x=(entry[0]-4.5)/11, y=(-4.5-i)/10)
+         keyboard_button.on_click = def():
+             print(entry[1])  
+         keyboard_buttons.append(keyboard_button)
 
 </script><script src="./sunsnake_compiler.js"></script></html>
